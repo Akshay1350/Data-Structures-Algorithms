@@ -63,7 +63,8 @@ void push()
         int ele;
         printf("Enter element to be inserted\n");
         scanf("%d",&ele);
-        stack[++top]=ele;
+        top = top +1;
+        stack[top]=ele;
         printf("Element inserted successfully\n");
         
     }
@@ -108,7 +109,7 @@ void traverse(void)
 	{
 		int i;
 		printf("Stack elements are :\n");
-		for(i=top ; i>=0 ; i--)
+		for(i=top ; i<=0 ; --i)
 		{
 			printf("%d \n", stack[i]);
 		}
